@@ -41,23 +41,21 @@ $(function(){
 		}
 	}
 
+	var outsideOfPip = function(mainTime) {
+		return ((mainTime < pipStartTime) || (mainTime > pipStartTime + pipDuration));
+	}
+
 	var isPipped = function () {
-		// TODO make sure the main video is at the pip range 
-		// TODO bonus points - that they are in sync
-		return ($(playerPip).length > 0) && $(playerPip).filter(":visible");
+		var pipOnPage = ($(playerPip).length > 0) && $(playerPip).filter(":visible");
+		return pipOnPage && !outsideOfPip(playerMain.currentTime);
 	}
 
 	var syncPip = function (mainTime) {
-		// beforePip - reset pip, fade out pip
-		if (mainTime < pipStartTime) {
+		// beforePip or afterPip - reset pip, fade out pip
+		if (outsideOfPip(mainTime)) {
 			killPip();
 		}
-		// afterPip - fade out pip
-		else if (mainTime > pipStartTime + pipDuration) {
-			killPip();
-		}
-		// earlierPip - seek pip
-		// laterPip - seek pip
+		// earlierPip or laterPip - seek pip
 		else {
 			$(playerPip).show();
 			var seekTime = mainTime - pipStartTime;
