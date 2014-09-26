@@ -4,6 +4,7 @@ var errorHandler = require('errorhandler');
 var redis = require("redis"),
 	client = redis.createClient();
 var _ = require("underscore");
+var moment = require('moment');
 var app = express();
 
 client.on("error", function (err) {
@@ -34,8 +35,12 @@ var fanupUserKey = function(isrc, userId) { return "fanups:" + isrc + ":" + user
 
 app.post('/upload', function(req, res) {
 	if (req.files && !_.isEmpty(req.files) && req.files.fanup) {
+		var duration = moment(req.body.startTime, "mm:ss"),
+			minutes = duration.minutes(),
+			seconds = duration.seconds(),
+			startTimeInSeconds = minutes * 60 + seconds;
 		var video = {
-			"startTime": req.body.startTime,
+			"startTime": startTimeInSeconds,
 			"path": "../" + req.files.fanup.path // relative to where it will be served (aka within ./src/)
 		}
 		var keyValuePairs = _.flatten(_.pairs(video));
