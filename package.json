@@ -1,0 +1,19 @@
+{
+  "name": "fanups",
+  "version": "0.0.0",
+  "description": "fanups ======",
+  "main": "server.js",
+  "dependencies": {
+    "errorhandler": "^1.2.0",
+    "error-handler": "^1.0.0",
+    "express": "^4.9.5",
+    "multer": "^0.1.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
