@@ -11,9 +11,9 @@ $(function(){
 		console.log("fanups JSON:", data.fanups); // DEBUG
 		// TODO handle multiple pips
 		pip = data.fanups[0]; // DEBUG
-		pipStartTime = pip.startTime;
+		pipStartTime = parseInt(pip.startTime, 10);
 		$(playerPip).attr("src", pip.path);
-		playerPip.load();
+		if (pipStartTime === 0) { startPip(); }
 		playerMain.play();
 	})
 	.fail(function(err) {
