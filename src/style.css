@@ -1,20 +1,32 @@
 video {
+	position: absolute;
 }
 
 .videos {
-	height: 720px;	
+	height: 529px;	
 	background-color: #222;
 }
 
 .pip {
 	z-index: 1;
 	display: none;
-	position: absolute;
-	top: 0;
-	left: 0;
+	position: relative;
+	top: 20px;
+	left: 20px;
+}
+
+.video-main {
+	width: 940px;
+	height: 529px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .main {
 	margin-left: auto;
 	margin-right: auto;
+	left:0;
+	right:0;
+	width: 940px;
+	height: 529px;
 }
