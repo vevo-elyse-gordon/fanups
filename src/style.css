@@ -30,3 +30,23 @@ video {
 	width: 940px;
 	height: 529px;
 }
+
+.upload-btn{
+	cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
+	padding:5px 15px; /*add some padding to the inside of the button*/
+	background: #fff; /*the colour of the button*/
+	border:3px solid #03cfeb; /*required or the default border for the browser will appear*/
+	/*give the button curved corners, alter the size as required*/
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	/*give the button a drop shadow*/
+	/*-webkit-box-shadow: 0 0 4px rgba(0,0,0, .75);
+	-moz-box-shadow: 0 0 4px rgba(0,0,0, .75);
+	box-*/shadow: 0 0 4px rgba(0,0,0, .75);
+	/*style the text*/
+	color:#03cfeb;
+	font-weight: bold;
+	font-size:.8em;
+	line-height: 2em;
+}
