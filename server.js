@@ -48,10 +48,10 @@ app.post('/upload', function(req, res) {
 		client.hmset([ fanupUserKey(isrc, userId) ].concat(keyValuePairs), function (err, replies) {
 			if (err || !replies) {
 				console.log("fanupError", err);
-				res.json(404, { "fanupError": err });
+				res.send(404, "No acorns here squirrel");
 			} else {
 				console.log("fanupSuccess", replies); // DEBUG
-				res.json(video);
+				res.redirect("/");
 			}
 		});
 	}
