@@ -107,6 +107,18 @@ $(function(){
 
 	$(playerMain).on("ended", function(){killPip(true)});
 
+	var playPauseMain = function() {
+		if (playerMain.paused) {
+			playerMain.play()
+		} else {
+			playerMain.pause();
+		}
+
+		return false;
+	};
+
+	$(playerMain).on("click", playPauseMain);
+
 	/*
 	PIP PLAYER EVENTS
 	*/
@@ -120,4 +132,8 @@ $(function(){
 	});
 
 	$(playerPip).on("ended", function(){killPip(true)});
+
+	$(".upload-container").on("click", function() {
+		if (!playerMain.paused) { playerMain.pause(); }
+	});
 });
