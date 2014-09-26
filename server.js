@@ -33,12 +33,9 @@ var isrc = "7574252720", userId = "1986";
 var fanupUserKey = function(isrc, userId) { return "fanups:" + isrc + ":" + userId; }
 
 app.post('/upload', function(req, res) {
-	// DEBUG
-	// console.log("params:", req.params);
-	// console.log("body:", req.body);
 	if (req.files && !_.isEmpty(req.files) && req.files.fanup) {
 		var video = {
-			"startTime": "0", // TODO: pull from req.params?
+			"startTime": req.body.startTime,
 			"path": "../" + req.files.fanup.path // relative to where it will be served (aka within ./src/)
 		}
 		var keyValuePairs = _.flatten(_.pairs(video));
