@@ -126,10 +126,59 @@ ul li {
 	margin-right: 30px;
 }
 
+.file-upload {
+	overflow: hidden;
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+	text-align: center;
+	color: #fff;
+	border: 2px solid #222;
+	background: #333;
+	border-radius: 10px;
+	/*text-shadow: #000 1px 1px 4px;*/
+	height: 36px;
+	left: 40px;
+}
+.file-upload, .file-upload span {
+	width: 14em;
+}
+.file-upload span {
+	position: relative;
+	top: 7px;
+	z-index: 10;
+}
+.file-upload strong {
+	/*font: normal 1.75em arial,sans-serif;*/
+}
+.file-upload input {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	font-size: 70px;
+	opacity: 0;
+}
+
+#newPipStartTime {
+	border: 3px solid #03cfeb;
+	border-radius: 10px;
+	color: #03cfeb;
+	font-size: 20px;
+	font-weight: bold;
+	font-size:.8em;
+	height: 41px;
+	left: 20px;
+	line-height: 2em;
+	position: relative;
+	text-align: center;
+	width: 75px;
+}
+
 .upload-btn{
 	cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
 	padding:5px 15px; /*add some padding to the inside of the button*/
-	background: #fff; /*the colour of the button*/
+	background: #03cfeb; /*the colour of the button*/
 	border:3px solid #03cfeb; /*required or the default border for the browser will appear*/
 	/*give the button curved corners, alter the size as required*/
 	-moz-border-radius: 10px;
@@ -140,7 +189,7 @@ ul li {
 	-moz-box-shadow: 0 0 4px rgba(0,0,0, .75);
 	box-*/shadow: 0 0 4px rgba(0,0,0, .75);
 	/*style the text*/
-	color:#03cfeb;
+	color:#fff;
 	font-weight: bold;
 	font-size:.8em;
 	line-height: 2em;
