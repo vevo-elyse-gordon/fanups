@@ -7,31 +7,41 @@
 	<body>
 		<div class="videos">
 			<div class="video-main">
-				<video id="playerMain" class="main" controls src="http://h264-aws.vevo.com/v3/h264/2014/08/USCJ81491268/19622996-fe56-4fdd-b7f1-1ef34ec927ed/uscj81491268_high_1280x720_h264_2000_aac_128.mp4"></video>
-				<video id="playerPip" class="pip"></video>
+				<video id="playerMain" class="main" controls src="http://h264-aws.vevo.com/v3/h264/USSM21302490/ussm21302490_high_1280x720_h264_2000_aac_128.mp4"></video>
+				<video id="playerPip" width="180px" height="320px" class="pip"></video>
 			</div>
 		</div>
 		<div class="fanups">
-			<ul>
-				<li class="title-container">
+				<div class="title-container">
 					<div class="title">FANUPS</div>
 					<div class="subtitle">3 fans</div>
-				</li>
+				</div>
 
-				<li class="fanup-select">
-					<img src="images/pip-thumbnail-small.png" />
-					<img src="images/pip-thumbnail-big.png" />
-					<img src="images/pip-thumbnail-small.png" />
-				</li>
+				<div class="fanup-select">
+					<ul>
+						<li><img src="images/pip-thumbnail-small.png" /></li>
+						<li>
+							<div class="fan selected">
+								<!-- <span class="left"><</span> -->
+								<img src="images/pip-thumbnail-big.png" />
+								<div class="fan-details">
+									<div class="fan-name">Jon Li</div>
+									<div class="fan-title">"We're happy at the VEVO hackathon"</div>
+								</div>
+								<!-- <span class="right">></span> -->
+							</div>
+						</li>
+						<li><img src="images/pip-thumbnail-small.png" /></li>
+					</ul>
+				</div>
 
-				<li class="upload-container">
+				<div class="upload-container">
 					<form enctype="multipart/form-data" action="/upload" method="post">
 						<input type="file" name="fanup" accept="mp4">
 						<input type="text" name="startTime" value="0">
 						<button name="upload" class="upload-btn">UPLOAD YOUR FANUP</button>
 					</form>
-				</li>
-			</ul>
+				</div>
 		</div>
 
 		<script type="text/javascript" src="main.js"></script>

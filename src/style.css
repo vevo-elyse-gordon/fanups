@@ -8,6 +8,8 @@ ul {
 
 ul li {
 	list-style: none;
+	float: left;
+	margin-right: 25px;
 }
 
 .videos {
@@ -20,8 +22,8 @@ ul li {
 	z-index: 1;
 	display: none;
 	position: relative;
-	top: 20px;
-	left: 20px;
+	left: 746px;
+	top: 200px;
 }
 
 .video-main {
@@ -49,15 +51,70 @@ ul li {
 }
 
 .upload-container {
+	float: right;
 	margin-right: 10px;
+	width: 570px;
 }	
 
 .title-container {
+	float: left;
+	font-family: "Arial Black";
+	width: 100px;
+}
+
+.title {
+	color: #f90094;
+	font-weight: bold;
+	font-size:1.2em;
+	line-height: 1.2em;
+}
+
+.subtitle {
+	color: #999;
+}
+
+.left {
+	float: left;
+	width: 20px;
+}
+
+.right {
+	float: right;
+	width: 20px;
+}
+
+.fan {
+	width: 400px;
+	background-color: #ccc;
+	height: 60px;
+	padding: 15px;
+	margin-top: -31px;
+	font-family: "Arial Black";
+}
+
+.fan .fan-details .fan-title {
+	font-size: .8em;
+	color: rgba(0,0,0,.5);
+}
+
+.fan .fan-details .fan-name {
+	font-size: 1.2em;
+	color: #f90094;
 }
 
 .fanup-select {
-	margin-left: auto;
-	margin-right: auto;
+	margin-left: 75px;
+	width: 650px;
+	float: left;
+}
+
+.fan img {
+	margin-left: 30px;
+}
+
+.fan-details {
+	float: right;
+	margin-right: 30px;
 }
 
 .upload-btn{

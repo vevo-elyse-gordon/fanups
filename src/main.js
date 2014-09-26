@@ -1,7 +1,8 @@
 $(function(){
 
 	var pipStartTime = 9;
-	var pipDuration = 20; // like Vine, but better ;)
+	var pipDuration = 240; // like Vine, but better ;)
+	var volumeAdjust = .5;
 
 	var playerMain = $('#playerMain')[0];
 	var playerPip = $('#playerPip')[0];
@@ -26,10 +27,12 @@ $(function(){
 		console.log("startPip");
 		$(playerPip).fadeIn("slow");
 		playerPip.play();
+		playerMain.volume = .5;
 		return null;
 	});
 
 	var killPip = function(fade){
+		playerMain.volume = 1;
 		console.log("killPip");
 		playerPip.pause();
 		playerPip.currentTime = 0;
@@ -59,6 +62,7 @@ $(function(){
 		else {
 			$(playerPip).show();
 			var seekTime = mainTime - pipStartTime;
+			playerMain.volume = .5;
 			playerPip.currentTime = seekTime;
 		}
 	}
