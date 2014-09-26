@@ -2,7 +2,16 @@ video {
 	position: absolute;
 }
 
+ul {
+	float: left;
+}
+
+ul li {
+	list-style: none;
+}
+
 .videos {
+	width: 100%;
 	height: 529px;	
 	background-color: #222;
 }
@@ -31,12 +40,24 @@ video {
 	height: 529px;
 }
 
-.upload-container {
+.fanups {
 	width: 100%;
+	padding: 15px;
+	height: 100%;
+	background-color: #eee;
+	height: 60px;
 }
 
-form {
-	float: right;
+.upload-container {
+	margin-right: 10px;
+}	
+
+.title-container {
+}
+
+.fanup-select {
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .upload-btn{

@@ -12,14 +12,26 @@
 			</div>
 		</div>
 		<div class="fanups">
+			<ul>
+				<li class="title-container">
+					<div class="title">FANUPS</div>
+					<div class="subtitle">3 fans</div>
+				</li>
 
-			<div class="upload-container">
-				<form enctype="multipart/form-data" action="/upload" method="post">
-					<input type="file" name="fanup" accept="mp4">
-					<input type="text" name="startTime" value="0">
-					<button name="upload" class="upload-btn">UPLOAD YOUR FANUP</button>
-				</form>
-			</div>
+				<li class="fanup-select">
+					<img src="images/pip-thumbnail-small.png" />
+					<img src="images/pip-thumbnail-big.png" />
+					<img src="images/pip-thumbnail-small.png" />
+				</li>
+
+				<li class="upload-container">
+					<form enctype="multipart/form-data" action="/upload" method="post">
+						<input type="file" name="fanup" accept="mp4">
+						<input type="text" name="startTime" value="0">
+						<button name="upload" class="upload-btn">UPLOAD YOUR FANUP</button>
+					</form>
+				</li>
+			</ul>
 		</div>
 
 		<script type="text/javascript" src="main.js"></script>
