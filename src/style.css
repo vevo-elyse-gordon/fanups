@@ -126,7 +126,12 @@ ul li {
 	margin-right: 30px;
 }
 
+.upload-container {
+	font-family: "Arial Black", sans-serif !important;
+}
+
 .file-upload {
+	cursor: pointer;
 	overflow: hidden;
 	display: inline-block;
 	position: relative;
@@ -136,7 +141,6 @@ ul li {
 	border: 2px solid #222;
 	background: #333;
 	border-radius: 10px;
-	/*text-shadow: #000 1px 1px 4px;*/
 	height: 36px;
 	left: 40px;
 }
@@ -145,7 +149,7 @@ ul li {
 }
 .file-upload span {
 	position: relative;
-	top: 7px;
+	top: 5px;
 	z-index: 10;
 }
 .file-upload strong {

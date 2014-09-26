@@ -133,7 +133,20 @@ $(function(){
 
 	$(playerPip).on("ended", function(){killPip(true)});
 
+	/*
+	UPLOAD EVENTS
+	*/
+
 	$(".upload-container").on("click", function() {
 		if (!playerMain.paused) { playerMain.pause(); }
+	});
+
+	$('.file-upload input[type=file]').on("change", function(e) { 
+		console.log(this.value); // DEBUG
+		if (this.value) {
+			var pathPieces = this.value.split("\\")
+			var fileName = pathPieces[pathPieces.length - 1];
+			$(".file-upload span").text(fileName);
+		};
 	});
 });
