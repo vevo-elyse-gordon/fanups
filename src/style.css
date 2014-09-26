@@ -31,6 +31,14 @@ video {
 	height: 529px;
 }
 
+.upload-container {
+	width: 100%;
+}
+
+form {
+	float: right;
+}
+
 .upload-btn{
 	cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
 	padding:5px 15px; /*add some padding to the inside of the button*/
