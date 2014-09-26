@@ -40,7 +40,10 @@
 
 				<div class="upload-container">
 					<form enctype="multipart/form-data" action="/upload" method="post">
-						<input type="file" name="fanup" accept="mp4">
+						<label class="file-upload">
+							<span><strong>Choose</strong></span>
+							<input type="file" name="fanup" accept="mp4">
+						</label>
 						<input id="newPipStartTime" type="text" name="startTime" value="0">
 						<button name="upload" class="upload-btn">UPLOAD YOUR FANUP</button>
 					</form>
