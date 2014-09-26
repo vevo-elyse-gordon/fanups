@@ -14,10 +14,12 @@ $(function(){
 		pipStartTime = parseInt(pip.startTime, 10);
 		$(playerPip).attr("src", pip.path);
 		if (pipStartTime === 0) { startPip(); }
-		playerMain.play();
 	})
 	.fail(function(err) {
 		console.error("fanups JSON error:", err);
+	})
+	.always(function() {
+		playerMain.play();
 	});
 
 	var startPip = _.once(function() {
