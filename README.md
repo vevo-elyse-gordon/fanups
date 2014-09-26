@@ -5,6 +5,8 @@ Social Mashups - Hackathon project
 
 Node server
 =====
-* Run node server.js
+* npm install
+* mkdir uploads # at the top level
+* node server.js
 
 
