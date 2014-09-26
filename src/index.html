@@ -12,9 +12,10 @@
 				<video id="playerPip" class="pip"></video>
 			</div>
 		</div>
-
-		<form enctype="multipart/form-data" action="/" method="post">
-			<input type="file" name="video" accept="mp4">
+		
+		<form enctype="multipart/form-data" action="/upload" method="post">
+			<input type="file" name="fanup" accept="mp4">
+			<input type="text" name="startTime" value="0">
 			<button name="upload" class="upload-btn">UPLOAD YOUR FANUP</button>
 		</form>
 

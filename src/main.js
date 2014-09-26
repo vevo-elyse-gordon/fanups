@@ -6,11 +6,18 @@ $(function(){
 	var playerMain = $('#playerMain')[0];
 	var playerPip = $('#playerPip')[0];
 
-	$.get("/fanups", function(data){
-		pipStartTime = data[0].startTime;
-		$(playerPip).attr("src", data[0].path);
+	$.getJSON("/fanups")
+	.success(function (data) {
+		console.log("fanups JSON:", data.fanups); // DEBUG
+		// TODO handle multiple pips
+		pip = data.fanups[0]; // DEBUG
+		pipStartTime = pip.startTime;
+		$(playerPip).attr("src", pip.path);
 		playerPip.load();
 		playerMain.play();
+	})
+	.fail(function(err) {
+		console.error("fanups JSON error:", err);
 	});
 
 	var startPip = _.once(function() {
