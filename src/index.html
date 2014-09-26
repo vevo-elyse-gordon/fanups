@@ -1,14 +1,17 @@
 <html>
 	<head>
+		<title>Vevo FANÜPS</title>
+		<link rel="shortcut icon" type="image/ico" href="images/favicon.ico" />
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 		<script src="//underscorejs.org/underscore-min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.3/moment.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
 		<div class="videos">
 			<div class="video-main">
 				<video id="playerMain" class="main" controls src="http://h264-aws.vevo.com/v3/h264/USSM21302490/ussm21302490_high_1280x720_h264_2000_aac_128.mp4"></video>
-				<video id="playerPip" width="180px" height="320px" class="pip"></video>
+				<video id="playerPip" preload width="180px" height="320px" class="pip"></video>
 			</div>
 		</div>
 		<div class="fanups">
@@ -38,7 +41,7 @@
 				<div class="upload-container">
 					<form enctype="multipart/form-data" action="/upload" method="post">
 						<input type="file" name="fanup" accept="mp4">
-						<input type="text" name="startTime" value="0">
+						<input id="newPipStartTime" type="text" name="startTime" value="0">
 						<button name="upload" class="upload-btn">UPLOAD YOUR FANUP</button>
 					</form>
 				</div>

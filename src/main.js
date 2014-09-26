@@ -77,11 +77,16 @@ $(function(){
 	// });
 
 	$(playerMain).on("timeupdate", function(evt){
-		var currentTime = playerMain.currentTime;
-		console.log("player currentTime", currentTime);
-		if (parseInt(currentTime, 10) === pipStartTime) {
+		console.log("playerMain.currentTime", playerMain.currentTime); // DEBUG
+		var currentTime = parseInt(playerMain.currentTime, 10);
+		if (currentTime === pipStartTime) {
 			startPip();
 		}
+
+		var minutes = Math.floor(currentTime / 60), 
+			seconds = currentTime % 60, 
+			currentMoment = moment({minutes: minutes, seconds: seconds});
+		$("#newPipStartTime").val(currentMoment.format("mm:ss"));
 	});
 
 	$(playerMain).on("seeked", function() {
